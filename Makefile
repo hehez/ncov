@@ -4,10 +4,10 @@ install:
 	npm install
 
 build:
-	docker build -t wuhan .
+	docker build -t wuhan-ncov-2020-be .
 
 run:
-	docker run -p 8088:3000 -d wuhan
+	docker run -p 80:3000 -d wuhan-ncov-2020-be
 
 start: build run
 

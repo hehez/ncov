@@ -12,7 +12,7 @@ const VERSION = '0.1.0';
 
 const server = new Hapi.Server({
     port: process.env.port || 3000,
-    host: 'localhost',
+    host: '0.0.0.0',
     routes: {
         cors: {
             origin: ['*']
