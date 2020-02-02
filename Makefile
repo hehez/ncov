@@ -4,10 +4,10 @@ install:
 	npm install
 
 build:
-	docker build -t app .
+	docker build -t wuhan .
 
 run:
-	docker run -p 80:3000 -d app
+	docker run -p 8088:3000 -d wuhan
 
 start: build run
 

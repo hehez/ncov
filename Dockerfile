@@ -1,9 +1,7 @@
 # Base image, pull from Docker.io if not
 FROM node:10-alpine
 
-# RUN mkdir -p /Users/hehez/workspace/workspace_nodejs/src/node
 # Create app directory
-# WORKDIR /var/www/amail/client
 WORKDIR /usr/src/app
 
 # Install app dependencies
