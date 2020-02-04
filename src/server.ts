@@ -40,7 +40,7 @@ const http = new Hapi.Server({ port: config.http.port });
 /**
  * Create HTTPS server
  */
-const server = new Hapi.Server({ port: config.https.port, tls: config.https });
+const server = new Hapi.Server({ host: config.host, port: config.https.port, tls: config.https });
 
 const init = async (): Promise<void> => {
     // multiple plugins
