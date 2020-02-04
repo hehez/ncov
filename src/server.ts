@@ -35,7 +35,7 @@ const config = {
 /**
  * Create HTTP server
  */
-const http = new Hapi.Server({ port: config.http.port });
+const http = new Hapi.Server({ host: config.host, port: config.http.port });
 
 /**
  * Create HTTPS server
@@ -82,6 +82,8 @@ const init = async (): Promise<void> => {
 
     // redirect HTTP to HTTPS
     http.ext('onRequest', (request, h) => {
+        console.log(request.url);
+        
         if (request.url.port !== config.https.port) {
             const redirect_url = URL.format({
                 protocol: config.https.protocol,
@@ -95,8 +97,9 @@ const init = async (): Promise<void> => {
     });
 
     await http.start();
+    console.log('HTTP Server running on %s', http.info.uri);
     await server.start();
-    console.log('Server running on %s', server.info.uri);
+    console.log('HTTPS Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {

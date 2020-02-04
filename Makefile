@@ -7,8 +7,7 @@ build:
 	docker build -t wuhan-ncov-2020-be .
 
 run:
-	docker run -p 3000:3000 -d wuhan-ncov-2020-be
-
+	docker run --name wuhan-https -p 3000:3000 -p 443:443 -d wuhan-ncov-2020-be
 start: build run
 
 stop:
