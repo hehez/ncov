@@ -2,6 +2,8 @@
 ## 武汉新型冠状病毒实时省市数据
 
 ## 程序基本介绍
+Docker + typescript + hapi
+
 - [x] RESTful APIs
 - [ ] Frontend
 
