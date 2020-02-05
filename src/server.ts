@@ -16,15 +16,7 @@ dotenv.config();
 
 const config = {
     host: '0.0.0.0',
-    http: {
-        port: process.env.HTTP_PORT || 3000,
-    },
-    https: {
-        protocol: process.env.HTTPS_PROTOCOL,
-        port: process.env.HTTPS_PORT || 443,
-        key: fs.readFileSync(process.env.HTTPS_KEY),
-        cert: fs.readFileSync(process.env.HTTPS_CERT)
-    },
+    port: process.env.HTTP_PORT || 3000,
     routes: {
         cors: {
             origin: ['*']
@@ -32,15 +24,7 @@ const config = {
     }
 }
 
-/**
- * Create HTTP server
- */
-const http = new Hapi.Server({ port: config.http.port });
-
-/**
- * Create HTTPS server
- */
-const server = new Hapi.Server({ host: config.host, port: config.https.port, tls: config.https });
+const server = new Hapi.Server(config);
 
 const init = async (): Promise<void> => {
     // multiple plugins
@@ -80,23 +64,8 @@ const init = async (): Promise<void> => {
     // multiple routes
     server.route(routes);
 
-    // redirect HTTP to HTTPS
-    http.ext('onRequest', (request, h) => {
-        if (request.url.port !== config.https.port) {
-            const redirect_url = URL.format({
-                protocol: config.https.protocol,
-                hostname: request.info.hostname,
-                pathname: request.url.pathname,
-                port: config.https.port
-            });
-            return h.redirect(redirect_url).code(301).takeover();
-        }
-        return h.continue();
-    });
-
-    await http.start();
     await server.start();
-    console.log('Server running on %s', server.info.uri);
+    console.log('HTTP Server running on %s', server.info.uri);
 };
 
 process.on('unhandledRejection', (err) => {

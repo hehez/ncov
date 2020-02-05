@@ -4,7 +4,7 @@
 ## 程序基本介绍
 Docker + typescript + hapi
 
-- [x] RESTful APIs
+- [x] Backend: RESTful APIs
 - [ ] Frontend
 
 
@@ -13,29 +13,29 @@ Docker + typescript + hapi
 安装 Docker
 
 ### 部署运行
+启动
 ```
 make start
+```
+
+删除
+```bash
+make stop
 ```
 
 ### 例子
 
 简单汇总:
-  - http://144.202.28.205/api/wuhan/1
+  - ncov.page/api/wuhan/1
 
 最新新闻:
-  - http://144.202.28.205/api/wuhan/2
+  - ncov.page/api/wuhan/2
   
 历史汇总:
-  - http://144.202.28.205/api/wuhan/3
+  - ncov.page/api/wuhan/3
   
-截止当前累计各省市明细:
-  - http://144.202.28.205/api/wuhan/4
-  
-~~当日增量各省市明细:~~
-  - http://144.202.28.205/api/wuhan/5
-  
-大汇总, 当日累计+当日增量:
-  - http://144.202.28.205/api/wuhan/6
+大汇总明细, 当日累计+当日增量:
+  - ncov.page/api/wuhan/6
 
 实时辟谣:
-  - http://144.202.28.205/api/wuhan/7
+  - ncov.page/api/wuhan/7
