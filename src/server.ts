@@ -14,6 +14,8 @@ import * as HandleBars  from 'handlebars';
 const VERSION = '0.1.0';
 dotenv.config();
 
+console.log(process.env.HTTP_PORT);
+
 const config = {
     host: '0.0.0.0',
     port: process.env.HTTP_PORT || 3000,
