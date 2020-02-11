@@ -26,16 +26,16 @@ make stop
 ### 例子
 
 简单汇总:
-  - ncov.page/api/wuhan/1
+  - ncov.page:5000/api/wuhan/1
 
 最新新闻:
-  - ncov.page/api/wuhan/2
+  - ncov.page:5000/api/wuhan/2
   
 历史汇总:
-  - ncov.page/api/wuhan/3
+  - ncov.page:5000/api/wuhan/3
   
 大汇总明细, 当日累计+当日增量:
-  - ncov.page/api/wuhan/6
+  - ncov.page:5000/api/wuhan/6
 
 实时辟谣:
-  - ncov.page/api/wuhan/7
+  - ncov.page:5000/api/wuhan/7

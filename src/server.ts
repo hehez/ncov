@@ -18,7 +18,7 @@ console.log(process.env.HTTP_PORT);
 
 const config = {
     host: '0.0.0.0',
-    port: process.env.HTTP_PORT || 3000,
+    port: process.env.HTTP_PORT || 5000,
     routes: {
         cors: {
             origin: ['*']
