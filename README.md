@@ -5,7 +5,7 @@
 Docker + typescript + hapi
 
 - [x] Backend: RESTful APIs
-- [ ] Frontend
+- [ ] Frontend, 开发中 https://github.com/hehez/ncov-web
 
 
 ## 快速上手指南
