@@ -8,6 +8,7 @@ const BASE_URI              = 'https://view.inews.qq.com/g2/getOnsInfo?name=';
 // APIs parameters
 const WUWEI_WW_GLOBAL_VARS  = 'wuwei_ww_global_vars';
 const DISEASE_H5            = 'disease_h5';
+const DISEASE_OTHER         = 'disease_other';
 
 const wuwei_ww_global_vars = async () => {
     const uri = BASE_URI + WUWEI_WW_GLOBAL_VARS;
@@ -18,6 +19,13 @@ const wuwei_ww_global_vars = async () => {
 
 const disease_h5 = async () => {
     const uri = BASE_URI + DISEASE_H5;
+    const { payload } = await Wreck.get(uri, { json: true });
+    const json = JSON.parse(payload.data);
+    return json;
+}
+
+const disease_other = async () => {
+    const uri = BASE_URI + DISEASE_OTHER;
     const { payload } = await Wreck.get(uri, { json: true });
     const json = JSON.parse(payload.data);
     return json;
@@ -97,6 +105,11 @@ const wuhan = [
             const json = JSON.parse(payload.data);
             return h.response(json);
         },
+    },
+    {
+        method: 'GET',
+        path: '/api/wuhan/8',   
+        handler: disease_other,
     }
 ];
 
