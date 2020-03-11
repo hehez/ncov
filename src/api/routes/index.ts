@@ -1,8 +1,9 @@
 'use strict';
 
-import * as hapi from '@hapi/hapi';
 import { wuhan } from './wuhan';
+import { covid19 } from './covid19';
 
 export const routes = [
-    ...wuhan
+    ...wuhan, 
+    ...covid19,
 ];

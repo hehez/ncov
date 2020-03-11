@@ -8,7 +8,7 @@ const URL       = require('url');
 import { routes }       from './api/routes';
 import * as Inert       from '@hapi/inert';
 import * as Logging     from 'hapi-pino';
-import * as Version     from '@hapi/vision';
+import * as Vision      from '@hapi/vision';
 import * as HandleBars  from 'handlebars';
 
 const VERSION = '0.1.0';
@@ -26,22 +26,27 @@ const config = {
     }
 }
 
+// differernt way to add plugins
+const plugins = [
+    Inert, 
+        Inert,
+    Inert, 
+    {
+        plugin: Vision,
+    },
+    {
+        plugin: require('hapi-geo-locate'),
+        options: {
+            enabledByDefault: true
+        }
+    }
+]
+
 const server = new Hapi.Server(config);
 
 const init = async (): Promise<void> => {
     // multiple plugins
-    await server.register([
-        Inert,
-        {
-            plugin: Version,
-        },
-        {
-            plugin: require('hapi-geo-locate'),
-            options: {
-                enabledByDefault: true
-            }
-        }
-    ]);
+    await server.register(plugins);
     
     // logger plugin
     await server.register({
