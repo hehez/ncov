@@ -5,7 +5,7 @@
 Docker + typescript + hapi
 
 - [x] Backend: RESTful APIs
-- [ ] Frontend
+- [ ] Frontend, 开发中 https://github.com/hehez/ncov-web
 
 
 ## 快速上手指南
@@ -26,16 +26,13 @@ make stop
 ### 例子
 
 简单汇总:
-  - ncov.page:5000/api/wuhan/1
+  - http://144.202.28.205:5000/api/wuhan/1
 
 最新新闻:
-  - ncov.page:5000/api/wuhan/2
+  - http://144.202.28.205:5000/api/wuhan/8
   
-历史汇总:
-  - ncov.page:5000/api/wuhan/3
-  
-大汇总明细, 当日累计+当日增量:
-  - ncov.page:5000/api/wuhan/6
+大汇总明细, 当日累计+当日增量 (实时):
+  - http://144.202.28.205:5000/api/wuhan/6
 
-实时辟谣:
-  - ncov.page:5000/api/wuhan/7
+实时辟谣 (有数据，已过期):
+  - http://144.202.28.205:5000/api/wuhan/7
