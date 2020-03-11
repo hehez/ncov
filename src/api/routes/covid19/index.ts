@@ -2,7 +2,6 @@
 
 import * as Hapi from'@hapi/hapi';
 import * as Wreck from '@hapi/wreck';
-import * as HTMLParser from 'htmlparser2';
 // import * as JSDOM from 'jsdom';
 import { JSDOM } from 'jsdom';
 
