@@ -71,6 +71,14 @@ const init = async (): Promise<void> => {
     // multiple routes
     server.route(routes);
 
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: async (request, h) => {
+            return h.redirect('/api/covid19/en');
+        }
+    });
+
     await server.start();
     console.log('HTTP Server running on %s', server.info.uri);
 };
