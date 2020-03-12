@@ -5,7 +5,8 @@
 Docker + typescript + hapi
 
 - [x] Backend: RESTful APIs
-- [ ] Frontend, 开发中 https://github.com/hehez/ncov-web
+  - 新添加北美病例，COVID-19 https://ncov.page/
+- [x] Frontend, 开发中 https://github.com/hehez/ncov-web
 
 
 ## 快速上手指南
