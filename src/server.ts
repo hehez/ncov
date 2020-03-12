@@ -5,7 +5,7 @@ const fs        = require('fs');
 const dotenv    = require('dotenv');
 const URL       = require('url');
 
-import { routes }       from './api/routes';
+import { routes, func_covid19 }       from './api/routes';
 import * as Inert       from '@hapi/inert';
 import * as Logging     from 'hapi-pino';
 import * as Vision      from '@hapi/vision';
@@ -72,9 +72,7 @@ const init = async (): Promise<void> => {
     server.route({
         method: 'GET',
         path: '/',
-        handler: async (request, h) => {
-            return h.redirect('/api/covid19/en');
-        }
+        handler: func_covid19,
     });
 
     await server.start();

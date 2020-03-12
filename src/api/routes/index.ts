@@ -2,6 +2,7 @@
 
 import { wuhan } from './wuhan';
 import { covid19 } from './covid19';
+export { fetch_covid19_data as func_covid19 } from './covid19';
 
 export const routes = [
     ...wuhan, 
