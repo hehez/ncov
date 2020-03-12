@@ -8,7 +8,7 @@ import { JSDOM } from 'jsdom';
 const BASE_URI = 'https://coronavirus.1point3acres.com/';
 
 const fetch_covid19_data = async (request, reply) => {
-    const locale = request.params.locale;
+    const locale = request.params.locale || 'en';
     const uri = BASE_URI + locale;
     const { res, payload } = await Wreck.get(uri, { json: false });
     const { document } = new JSDOM(payload.toString()).window;
@@ -32,7 +32,7 @@ const fetch_covid19_data = async (request, reply) => {
 const covid19 = [
     {
         method: 'GET',
-        path: '/api/covid19/{locale}',   
+        path: '/api/covid19/{locale?}',   
         handler: fetch_covid19_data,
     }
 ];

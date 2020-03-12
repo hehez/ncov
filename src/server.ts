@@ -28,9 +28,7 @@ const config = {
 
 // differernt way to add plugins
 const plugins = [
-    Inert, 
-        Inert,
-    Inert, 
+    Inert,
     {
         plugin: Vision,
     },
