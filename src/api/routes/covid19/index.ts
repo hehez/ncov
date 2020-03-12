@@ -3,6 +3,8 @@
 import * as Wreck from '@hapi/wreck';
 import { JSDOM } from 'jsdom';
 
+import * as states from '../../../config/locales/states-mapping.json';
+
 const BASE_URI = 'https://coronavirus.1point3acres.com/';
 
 export const fetch_covid19_data = async (request, reply) => {
@@ -22,7 +24,9 @@ export const fetch_covid19_data = async (request, reply) => {
     const state_json = {};
     state_detail.forEach(nodeList => {
         const span_nodes = nodeList.childNodes;
-        state_json[span_nodes[0].textContent] = {
+        const states_zh = span_nodes[0].textContent;
+        const states_en = states.states[states_zh]
+        state_json[!states_en ? states_zh : states_en.en] = {
             confirmed: span_nodes[1].textContent,
             new: span_nodes[2].textContent,
             deaths: span_nodes[3].textContent,
@@ -40,6 +44,10 @@ export const fetch_covid19_data = async (request, reply) => {
         update_time: update_time,
         state_json: state_json,
     });
+};
+
+const states_name_convertor = () => {
+
 };
 
 const covid19 = [
