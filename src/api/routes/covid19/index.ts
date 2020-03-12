@@ -21,12 +21,13 @@ export const fetch_covid19_data = async (request, reply) => {
     const state_detail = document.querySelectorAll("#map > div.tab-container > div.active > div.state-table > div > div.row");
     const state_json = {};
     state_detail.forEach(nodeList => {
-        const span_node = nodeList.childNodes;
-        state_json[span_node[0].textContent] = {
-            confirmed: span_node[1].textContent,
-            new: span_node[2].textContent,
-            deaths: span_node[3].textContent,
-            source: span_node[4].querySelector('div > a') ? span_node[4].querySelector('div > a').getAttribute('href') : '',
+        const span_nodes = nodeList.childNodes;
+        state_json[span_nodes[0].textContent] = {
+            confirmed: span_nodes[1].textContent,
+            new: span_nodes[2].textContent,
+            deaths: span_nodes[3].textContent,
+            source: span_nodes[4].querySelector('div > a') ? span_nodes[4].querySelector('div > a').getAttribute('href') : '',
+            isSOE: !!span_nodes[0].querySelector('i'),
         };
     });
     
