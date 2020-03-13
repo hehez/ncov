@@ -13,7 +13,7 @@
     <div class="jsx-2148643840">
         <div id="stat" class="jsx-1529211916 card">
             <h2 class="jsx-1529211916">
-                <div class="jsx-1529211916">COVID-19</div>
+                <div class="jsx-1529211916">{{ title }}</div>
                 <div class="jsx-1529211916 subtitle">
                     <span class="jsx-1529211916 due">Until: {{ update_time }} UTC</span>
                 </div>
@@ -47,8 +47,8 @@
                         <header class="jsx-3748010317 row">
                             <span class="jsx-3748010317">Location</span>
                             <span class="jsx-3748010317">Confirmed</span>
-                            <span class="jsx-3748010317">New</span>
                             <span class="jsx-3748010317">Deaths</span>
+                            <span class="jsx-3748010317">Case fatality rate</span>
                             <span class="jsx-3748010317">Source</span>
                         </header>
 
@@ -65,12 +65,20 @@
                                     {{/if}}
                                 </span>
                                 <span class="jsx-3748010317">{{ state_info.confirmed }}</span>
-                                <span class="jsx-3748010317">{{ state_info.new }}</span>
                                 <span class="jsx-3748010317">{{ state_info.deaths }}</span>
-                                <span class="jsx-3748010317"><div class="jsx-3748010317 reference-button-container"><a href="{{ state_info.source }}" target="_blank" class="jsx-3748010317"><i aria-label="icon: link" class="anticon anticon-link"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="link" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></i></a></div>
+                                <span class="jsx-3748010317">{{ state_info.daeath_rate }}</span>
+                                <span class="jsx-3748010317">
+                                    {{#if state_info.source}}
+                                    <div class="jsx-3748010317 reference-button-container">
+                                        <a href="{{ state_info.source }}" target="_blank" class="jsx-3748010317">
+                                            <i aria-label="icon: link" class="anticon anticon-link"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="link" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></i>
+                                        </a>
+                                    </div>
+                                    {{/if}}
+                                </span>
+                            </div>
                         </div>
                         {{/each}}
-
                     </div>
                 </div>
             </div>

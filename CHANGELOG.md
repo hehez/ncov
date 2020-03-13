@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [0.0.3] - 2020-03-12
+### Changed
+- UI changed, fixed un-matching column
+
+## [0.0.3] - 2020-03-12
 ### Added
 - Add a new endpoint `/api/covid19/en`, load North Amercia cases
 - Add handlebar to display US cases in different states

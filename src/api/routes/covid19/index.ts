@@ -13,7 +13,8 @@ export const fetch_covid19_data = async (request, reply) => {
     
     const { res, payload } = await Wreck.get(uri, { json: false });
     const { document } = new JSDOM(payload.toString()).window;
-    const title = document.querySelector('title').textContent;
+    const title = 'COVID-19/Coronavirus Real Time Updates';
+    
     const description = document.querySelector("meta[name='description']").content;
     const us_total = description.match(/(?<us_num>\d+)\sconfirmed cases in US/).groups['us_num'];
     const ca_total = description.match(/(?<ca_num>\d+)\sconfirmed cases in Canada/).groups['ca_num'];
@@ -28,8 +29,8 @@ export const fetch_covid19_data = async (request, reply) => {
         const states_en = states.states[states_zh]
         state_json[!states_en ? states_zh : states_en.en] = {
             confirmed: span_nodes[1].textContent,
-            new: span_nodes[2].textContent,
-            deaths: span_nodes[3].textContent,
+            deaths: span_nodes[2].textContent,
+            daeath_rate: span_nodes[3].textContent,
             source: span_nodes[4].querySelector('div > a') ? span_nodes[4].querySelector('div > a').getAttribute('href') : '',
             isSOE: !!span_nodes[0].querySelector('i'),
         };

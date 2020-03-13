@@ -1,14 +1,14 @@
 {
     "states": {
         "亚拉巴马州": { "abbr": "AL", "en": "Alabama", "zh": "亚拉巴马州" },
-        "阿拉斯加": { "abbr": "AK", "en": "Alaska", "zh": "阿拉斯加州" },
+        "阿拉斯加州": { "abbr": "AK", "en": "Alaska", "zh": "阿拉斯加州" },
         "亚利桑那": { "abbr": "AZ", "en": "Arizona", "zh": "亚利桑那州" },
         "阿肯色州": { "abbr": "AR", "en": "Arkansas", "zh": "阿肯色州" },
         "加州": { "abbr": "CA", "en": "California", "zh": "加利福尼亚州" },
         "科罗拉多": { "abbr": "CO", "en": "Colorado", "zh": "科罗拉多州" },
         "康涅狄格": { "abbr": "CT", "en": "Connecticut", "zh": "康涅狄格州" },
         "特拉华": { "abbr": "DE", "en": "Delaware", "zh": "特拉华州" },
-        "华盛顿特区": { "abbr": "DC", "en": "District Of Columbia", "zh": "华盛顿哥伦比亚特区" },
+        "华盛顿特区": { "abbr": "DC", "en": "Washington, D.C.", "zh": "华盛顿哥伦比亚特区" },
         "佛罗里达": { "abbr": "FL", "en": "Florida", "zh": "佛罗里达州" },
         "乔治亚": { "abbr": "GA", "en": "Georgia", "zh": "佐治亚州" },
         "夏威夷": { "abbr": "HI", "en": "Hawaii", "zh": "夏威夷州" },
