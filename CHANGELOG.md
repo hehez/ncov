@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.3] - 2020-03-12
+## [0.0.4] - 2020-03-13
 ### Changed
 - UI changed, fixed un-matching column
+- UI changed, fixed un-matching state's name
 
 ## [0.0.3] - 2020-03-12
 ### Added
