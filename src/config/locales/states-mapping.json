@@ -53,6 +53,7 @@
         "怀俄明州": { "abbr": "WY", "en": "Wyoming", "zh": "" },
         "钻石公主号": { "abbr": "", "en": "Diamond Princess", "zh": "钻石公主号" },
         "至尊公主号": { "abbr": "", "en": "Grand Princess", "zh": "至尊公主号" },
-        "武汉撤侨": { "abbr": "", "en": "Wuhan Evacuee", "zh": "武汉撤侨" }
+        "武汉撤侨": { "abbr": "", "en": "Wuhan Evacuee", "zh": "武汉撤侨" },
+        "波多黎各": { "abbr": "", "en": "Puerto Rico", "zh": "波多黎各" }
     }
 }
