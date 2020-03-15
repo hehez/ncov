@@ -1,9 +1,9 @@
 {
     "states": {
         "阿拉巴马": { "abbr": "AL", "en": "Alabama", "zh": "亚拉巴马州" },
-        "阿拉斯加州": { "abbr": "AK", "en": "Alaska", "zh": "阿拉斯加州" },
+        "阿拉斯加": { "abbr": "AK", "en": "Alaska", "zh": "阿拉斯加州" },
         "亚利桑那": { "abbr": "AZ", "en": "Arizona", "zh": "亚利桑那州" },
-        "阿肯色州": { "abbr": "AR", "en": "Arkansas", "zh": "阿肯色州" },
+        "阿肯色": { "abbr": "AR", "en": "Arkansas", "zh": "阿肯色州" },
         "加州": { "abbr": "CA", "en": "California", "zh": "加利福尼亚州" },
         "科罗拉多": { "abbr": "CO", "en": "Colorado", "zh": "科罗拉多州" },
         "康涅狄格": { "abbr": "CT", "en": "Connecticut", "zh": "康涅狄格州" },
@@ -24,9 +24,9 @@
         "马萨诸塞": { "abbr": "MA", "en": "Massachusetts", "zh": "麻萨诸塞州" },
         "密西根": { "abbr": "MI", "en": "Michigan", "zh": "密歇根州" },
         "明尼苏达": { "abbr": "MN", "en": "Minnesota", "zh": "明尼苏达州" },
-        "密西西比州": { "abbr": "MS", "en": "Mississippi", "zh": "密西西比州" },
+        "密西西比": { "abbr": "MS", "en": "Mississippi", "zh": "密西西比州" },
         "密苏里": { "abbr": "MO", "en": "Missouri", "zh": "密苏里州" },
-        "蒙大拿州": { "abbr": "MT", "en": "Montana", "zh": "蒙大拿州" },
+        "蒙大拿": { "abbr": "MT", "en": "Montana", "zh": "蒙大拿州" },
         "内布拉斯加": { "abbr": "NE", "en": "Nebraska", "zh": "内布拉斯加州" },
         "内华达": { "abbr": "NV", "en": "Nevada", "zh": "内华达州" },
         "新罕布什尔": { "abbr": "NH", "en": "New Hampshire", "zh": "新罕布什尔州" },
@@ -47,13 +47,14 @@
         "犹他": { "abbr": "UT", "en": "Utah", "zh": "犹他州" },
         "佛蒙特": { "abbr": "VT", "en": "Vermont", "zh": "佛蒙特州" },
         "弗吉尼亚": { "abbr": "VA", "en": "Virginia", "zh": "弗吉尼亚州" },
-        "华盛顿州": { "abbr": "WA", "en": "Washington", "zh": "" },
-        "西弗吉尼亚州": { "abbr": "WV", "en": "West Virginia", "zh": "" },
+        "华盛顿州": { "abbr": "WA", "en": "Washington", "zh": "华盛顿州" },
+        "西弗吉尼亚州": { "abbr": "WV", "en": "West Virginia", "zh": "西弗吉尼亚州" },
         "威斯康星": { "abbr": "WI", "en": "Wisconsin", "zh": "威斯康星州" },
-        "怀俄明州": { "abbr": "WY", "en": "Wyoming", "zh": "" },
+        "怀俄明": { "abbr": "WY", "en": "Wyoming", "zh": "怀俄明州" },
         "钻石公主号": { "abbr": "", "en": "Diamond Princess", "zh": "钻石公主号" },
         "至尊公主号": { "abbr": "", "en": "Grand Princess", "zh": "至尊公主号" },
         "武汉撤侨": { "abbr": "", "en": "Wuhan Evacuee", "zh": "武汉撤侨" },
-        "波多黎各": { "abbr": "", "en": "Puerto Rico", "zh": "波多黎各" }
+        "波多黎各": { "abbr": "", "en": "Puerto Rico", "zh": "波多黎各" },
+        "美属维京群岛": { "abbr": "", "en": "U.S. Virgin Islands", "zh": "美属维京群岛" }
     }
 }
