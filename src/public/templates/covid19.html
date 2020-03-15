@@ -23,7 +23,18 @@
                     <div class="jsx-889234990 tag-title">US</div>
                     <div class="jsx-889234990 counts">
                         <section class="jsx-889234990">
-                            <strong class="jsx-889234990">{{ us_total }}</strong>
+                            <div class="jsx-889234990">New: <span class="jsx-889234990">{{ us_daily_update_info_json.us_daily_add_new }}</span></div>
+                            <strong class="jsx-889234990">{{ us_daily_update_info_json.us_total }}</strong>
+                            <div class="jsx-889234990">Confirmed</div>
+                        </section>
+                        <section class="jsx-889234990">
+                            <strong class="jsx-889234990">{{ us_daily_update_info_json.us_total_recovered }}</strong>
+                            <div class="jsx-889234990">Recovered</div>
+                        </section>
+                        <section class="jsx-889234990">
+                            <div class="jsx-889234990">New: <span class="jsx-889234990">{{ us_daily_update_info_json.us_daily_deaths_new }}</span></div>
+                            <strong class="jsx-889234990">{{ us_daily_update_info_json.us_total_deaths }}</strong>
+                            <div class="jsx-889234990">Deaths</div>
                         </section>
                     </div>
                 </div>
@@ -31,7 +42,18 @@
                     <div class="jsx-889234990 tag-title">CA</div>
                     <div class="jsx-889234990 counts">
                         <section class="jsx-889234990">
-                            <strong class="jsx-889234990">{{ ca_total }}</strong>
+                            <div class="jsx-889234990">New: <span class="jsx-889234990">{{ ca_daily_update_info_json.ca_daily_add_new }}</span></div>
+                            <strong class="jsx-889234990">{{ ca_daily_update_info_json.ca_total }}</strong>
+                            <div class="jsx-889234990">Confirmed</div>
+                        </section>
+                        <section class="jsx-889234990">
+                            <strong class="jsx-889234990">{{ ca_daily_update_info_json.ca_total_recovered }}</strong>
+                            <div class="jsx-889234990">Recovered</div>
+                        </section>
+                        <section class="jsx-889234990">
+                            <div class="jsx-889234990">New: <span class="jsx-889234990">{{ ca_daily_update_info_json.ca_daily_deaths_new }}</span></div>
+                            <strong class="jsx-889234990">{{ ca_daily_update_info_json.ca_total_deaths }}</strong>
+                            <div class="jsx-889234990">Deaths</div>
                         </section>
                     </div>
                 </div>
@@ -40,7 +62,7 @@
         <div id="map" class="jsx-2160275241 card">
             <div class="jsx-2160275241 tab-container">
                 <div class="jsx-2160275241 active">
-                    <h3 class="jsx-2160275241">🇺🇸US Cases
+                    <h3 class="jsx-2160275241">🇺🇸 US Cases
                         <div class="jsx-2160275241"></div>
                     </h3>
                     <div class="jsx-3748010317 state-table">
@@ -67,15 +89,7 @@
                                 <span class="jsx-3748010317">{{ state_info.confirmed }}</span>
                                 <span class="jsx-3748010317">{{ state_info.deaths }}</span>
                                 <span class="jsx-3748010317">{{ state_info.daeath_rate }}</span>
-                                <span class="jsx-3748010317">
-                                    {{#if state_info.source}}
-                                    <div class="jsx-3748010317 reference-button-container">
-                                        <a href="{{ state_info.source }}" target="_blank" class="jsx-3748010317">
-                                            <i aria-label="icon: link" class="anticon anticon-link"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="link" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M574 665.4a8.03 8.03 0 0 0-11.3 0L446.5 781.6c-53.8 53.8-144.6 59.5-204 0-59.5-59.5-53.8-150.2 0-204l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3l-39.8-39.8a8.03 8.03 0 0 0-11.3 0L191.4 526.5c-84.6 84.6-84.6 221.5 0 306s221.5 84.6 306 0l116.2-116.2c3.1-3.1 3.1-8.2 0-11.3L574 665.4zm258.6-474c-84.6-84.6-221.5-84.6-306 0L410.3 307.6a8.03 8.03 0 0 0 0 11.3l39.7 39.7c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c53.8-53.8 144.6-59.5 204 0 59.5 59.5 53.8 150.2 0 204L665.3 562.6a8.03 8.03 0 0 0 0 11.3l39.8 39.8c3.1 3.1 8.2 3.1 11.3 0l116.2-116.2c84.5-84.6 84.5-221.5 0-306.1zM610.1 372.3a8.03 8.03 0 0 0-11.3 0L372.3 598.7a8.03 8.03 0 0 0 0 11.3l39.6 39.6c3.1 3.1 8.2 3.1 11.3 0l226.4-226.4c3.1-3.1 3.1-8.2 0-11.3l-39.5-39.6z"></path></svg></i>
-                                        </a>
-                                    </div>
-                                    {{/if}}
-                                </span>
+                                <span class="jsx-3748010317"></span>
                             </div>
                         </div>
                         {{/each}}

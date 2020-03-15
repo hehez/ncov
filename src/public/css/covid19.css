@@ -293,7 +293,7 @@ span.jsx-3748010317:first-child {
     align-items: center;
 }
 
-.stat.jsx-3748010317 span.jsx-3748010317:first-child.jsx-3748010317::before {
+/* .stat.jsx-3748010317 span.jsx-3748010317:first-child.jsx-3748010317::before {
     content: '';
     border: 4px solid transparent;
     border-left: 6px solid #f60;
@@ -312,7 +312,7 @@ span.jsx-3748010317:first-child {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-}
+} */
 
 .reference-button-container.jsx-3748010317 {
     display: inline-block;
