@@ -16,6 +16,7 @@
                 <div class="jsx-1529211916">{{ title }}</div>
                 <div class="jsx-1529211916 subtitle">
                     <span class="jsx-1529211916 due">Until: {{ update_time }} UTC</span>
+                    <a href="https://coronavirus.1point3acres.com/en">Data Source 1p3a</a>
                 </div>
             </h2>
             <div class="jsx-2233476302 row">
@@ -86,8 +87,16 @@
                                     </i>
                                     {{/if}}
                                 </span>
-                                <span class="jsx-3748010317">{{ state_info.confirmed }}</span>
-                                <span class="jsx-3748010317">{{ state_info.deaths }}</span>
+                                <span class="jsx-3748010317">{{ state_info.state_daily_confirmed }}
+                                    {{#if state_info.state_daily_confirmed_new}}
+                                    <sup class="jsx-3748010317">+{{ state_info.state_daily_confirmed_new }}</sup>
+                                    {{/if}}
+                                </span>
+                                <span class="jsx-3748010317">{{ state_info.state_daily_deaths }}
+                                    {{#if state_info.state_daily_deaths_new}}
+                                    <sup class="jsx-3748010317">+{{ state_info.state_daily_deaths_new }}</sup>
+                                    {{/if}}
+                                </span>
                                 <span class="jsx-3748010317">{{ state_info.daeath_rate }}</span>
                                 <span class="jsx-3748010317"></span>
                             </div>

@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - UI changed, fixed un-matching state's name
 - UI changed, remove expand states
 - UI changed, add daily new cases, deaths cases and recovered cases for both US and CA
+- UI changed, add daily new cases, deaths cases for each states
+- UI changed, add 1point3acres as date source
 
 ## [0.0.4] - 2020-03-13
 ### Changed
