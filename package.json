@@ -1,6 +1,6 @@
 {
     "name": "wuhan-ncov-2020",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "description": "A backend server",
     "main": "index.js",
     "scripts": {

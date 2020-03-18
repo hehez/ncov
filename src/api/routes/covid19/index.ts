@@ -58,7 +58,6 @@ export const fetch_covid19_data = async (request, reply) => {
 
         const state_confirmed_info = span_nodes[1].textContent.split('+');
         const state_deaths_info = span_nodes[2].textContent.split('+');
-        
 
         state_json[!states_en ? states_zh : states_en.en] = {
             state_daily_confirmed: state_confirmed_info[0],
@@ -71,10 +70,6 @@ export const fetch_covid19_data = async (request, reply) => {
             isSOE: !!span_nodes[0].querySelector('i'),
         };
     });
-    console.log(state_detail[0].childNodes[1].textContent.split('+'));
-    console.log();
-    
-    console.log(state_detail[1].childNodes[1].textContent.split('+'));
     
     return reply.view('covid19', 
     { 
