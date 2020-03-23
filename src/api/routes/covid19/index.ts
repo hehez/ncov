@@ -17,10 +17,11 @@ export const fetch_covid19_data = async (request, reply) => {
     const title = 'COVID-19/Coronavirus Real Time Updates';
     
     const description = document.querySelector("meta[name='description']").content;
-    // const us_total = description.match(/(?<us_num>\d+)\sconfirmed cases in US/).groups['us_num'];
-    // const ca_total = description.match(/(?<ca_num>\d+)\sconfirmed cases in Canada/).groups['ca_num'];
-    
-    const update_time = description.match(/(?<update_time>\d{4}-\d{2}-\d{2} \d{2}:\d{2})/).groups['update_time'];
+
+    /**
+     * Last updated at:
+     */
+    const update_time = document.querySelector("#stat > h2 > div.subtitle > span.due").textContent;
 
     /**
      * Parse the numbers of cases in both US and CA
@@ -56,16 +57,15 @@ export const fetch_covid19_data = async (request, reply) => {
         const states_zh = span_nodes[0].textContent;
         const states_en = states.states[states_zh];
 
-        const state_confirmed_info = span_nodes[1].textContent.split('+');
-        const state_deaths_info = span_nodes[2].textContent.split('+');
+        const state_confirmed_info = span_nodes[1].childNodes;
+        const state_deaths_info = span_nodes[2].childNodes;
 
         state_json[!states_en ? states_zh : states_en.en] = {
-            state_daily_confirmed: state_confirmed_info[0],
-            state_daily_confirmed_new: state_confirmed_info.length > 1 ? state_confirmed_info[1] : '',
-            state_daily_deaths: state_deaths_info[0],
-            state_daily_deaths_new: state_deaths_info.length > 1 ? state_deaths_info[1] : '',
+            state_daily_confirmed: state_confirmed_info.length == 1 ? state_confirmed_info[0].textContent : state_confirmed_info[1].textContent,
+            state_daily_confirmed_new: state_confirmed_info.length == 1 ? '' : state_confirmed_info[0].textContent,
+            state_daily_deaths: state_deaths_info.length == 1 ? state_deaths_info[0].textContent : state_deaths_info[1].textContent,
+            state_daily_deaths_new: state_deaths_info.length == 1 ? '' : state_deaths_info[0].textContent,
             daeath_rate: span_nodes[3].textContent,
-            // source: span_nodes[4].querySelector('div > a') ? span_nodes[4].querySelector('div > a').getAttribute('href') : '',
             source: span_nodes[4].innerHTML,
             isSOE: !!span_nodes[0].querySelector('i'),
         };

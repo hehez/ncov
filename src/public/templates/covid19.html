@@ -15,7 +15,7 @@
             <h2 class="jsx-1529211916">
                 <div class="jsx-1529211916">{{ title }}</div>
                 <div class="jsx-1529211916 subtitle">
-                    <span class="jsx-1529211916 due">Until: {{ update_time }} UTC</span>
+                    <span class="jsx-1529211916 due">{{ update_time }}</span>
                     <a href="https://coronavirus.1point3acres.com/en">Data Source 1p3a</a>
                 </div>
             </h2>
@@ -87,15 +87,13 @@
                                     </i>
                                     {{/if}}
                                 </span>
-                                <span class="jsx-3748010317">{{ state_info.state_daily_confirmed }}
-                                    {{#if state_info.state_daily_confirmed_new}}
-                                    <sup class="jsx-3748010317">+{{ state_info.state_daily_confirmed_new }}</sup>
-                                    {{/if}}
+                                <span class="jsx-3748010317">
+                                    <div class="jsx-3323058653">{{ state_info.state_daily_confirmed_new }}</div>
+                                    {{ state_info.state_daily_confirmed }}
                                 </span>
-                                <span class="jsx-3748010317">{{ state_info.state_daily_deaths }}
-                                    {{#if state_info.state_daily_deaths_new}}
-                                    <sup class="jsx-3748010317">+{{ state_info.state_daily_deaths_new }}</sup>
-                                    {{/if}}
+                                <span class="jsx-3748010317">
+                                    <div class="jsx-2274486433">{{ state_info.state_daily_deaths_new }}</div>
+                                    {{ state_info.state_daily_deaths }}
                                 </span>
                                 <span class="jsx-3748010317">{{ state_info.daeath_rate }}</span>
                                 <span class="jsx-3748010317"></span>

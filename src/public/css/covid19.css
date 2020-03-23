@@ -256,7 +256,7 @@ header.jsx-3748010317 span.jsx-3748010317:nth-child(5) {
 
 .row.jsx-3748010317 {
     display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr) 0.75fr;
+    grid-template-columns: 1.7fr repeat(3, 1fr) 0.75fr;
     gap: 1px;
     padding: 0px;
     font-weight: 700;
@@ -271,6 +271,25 @@ span.jsx-3748010317 {
     text-align: center;
     padding: 5px 2px;
     background: #f7f7f7;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+span.jsx-3748010317:nth-child(2),
+span.jsx-3748010317:nth-child(3) {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .counties.jsx-3748010317 .row.jsx-3748010317 span.jsx-3748010317 {
@@ -283,15 +302,12 @@ span.jsx-3748010317:first-child {
     text-align: left;
     padding-left: 20px;
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
+
 
 /* .stat.jsx-3748010317 span.jsx-3748010317:first-child.jsx-3748010317::before {
     content: '';
@@ -302,10 +318,14 @@ span.jsx-3748010317:first-child {
     display: inline-block;
     position: absolute;
     left: 5px;
-    top: 10px;
 }
 
-.stat.expand.jsx-3748010317 span.jsx-3748010317:first-child.jsx-3748010317::before {
+.stat.jsx-3748010317 span.jsx-3748010317:first-child {
+    cursor: pointer;
+} */
+
+
+/* .stat.expand.jsx-3748010317 span.jsx-3748010317:first-child.jsx-3748010317::before {
     -webkit-transform-origin: 4px 5px;
     -ms-transform-origin: 4px 5px;
     transform-origin: 4px 5px;
@@ -324,4 +344,28 @@ span.jsx-3748010317:first-child {
     font-size: 12px;
     color: #f60;
     margin-left: 2px;
+}
+
+div.jsx-3323058653 {
+    color: #f60;
+    font-size: 8px;
+    padding: 0px 2px;
+    font-weight: 400;
+    left: 2px;
+}
+
+div.hidden.jsx-3323058653 {
+    visibility: hidden;
+}
+
+div.jsx-2274486433 {
+    color: #5e7092;
+    font-size: 8px;
+    padding: 0px 2px;
+    font-weight: 400;
+    left: 2px;
+}
+
+div.hidden.jsx-2274486433 {
+    visibility: hidden;
 }

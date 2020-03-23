@@ -27,13 +27,16 @@ make stop
 ### 例子
 
 简单汇总:
-  - http://144.202.28.205:5000/api/wuhan/1
+  - http://ncov.page/api/wuhan/1
 
 最新新闻:
-  - http://144.202.28.205:5000/api/wuhan/8
+  - http://ncov.page/api/wuhan/8
   
 大汇总明细, 当日累计+当日增量 (实时):
-  - http://144.202.28.205:5000/api/wuhan/6
+  - http://ncov.page/api/wuhan/6
 
 实时辟谣 (有数据，已过期):
-  - http://144.202.28.205:5000/api/wuhan/7
+  - http://ncov.page/api/wuhan/7
+
+北美时实:
+  - http://ncov.page/api/covid19/en

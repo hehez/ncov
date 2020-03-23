@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2020-03-23
+### Changed
+- UI changed, added new style
+- Updated new case parser 
+- Update README
+
 ## [0.0.6] - 2020-03-17
 ### Changed
 - UI changed, fixed un-matching state's name
