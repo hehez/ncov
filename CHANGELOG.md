@@ -6,10 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.8] - 2020-03-24
+### Changed
+- Add testing data from project https://covidtracking.com/
+- Add a new nedpoint `/api/covid19/states`
+- Add node-fetch
+
+- Update README
+
 ## [0.0.7] - 2020-03-23
 ### Changed
 - UI changed, added new style
-- Updated new case parser 
+- Update new case parser 
 - Update README
 
 ## [0.0.6] - 2020-03-17

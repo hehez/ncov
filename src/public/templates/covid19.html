@@ -71,8 +71,10 @@
                             <span class="jsx-3748010317">Location</span>
                             <span class="jsx-3748010317">Confirmed</span>
                             <span class="jsx-3748010317">Deaths</span>
-                            <span class="jsx-3748010317">Case fatality rate</span>
-                            <span class="jsx-3748010317">Source</span>
+                            <span class="jsx-3748010317">Case Fatality Rate</span>
+                            <span class="jsx-3748010317">Positive</span>
+                            <span class="jsx-3748010317">Total Tests</span>
+                            <span class="jsx-3748010317">Rate</span>
                         </header>
 
                         {{#each state_json as |state_info state_name| }}
@@ -96,7 +98,9 @@
                                     {{ state_info.state_daily_deaths }}
                                 </span>
                                 <span class="jsx-3748010317">{{ state_info.daeath_rate }}</span>
-                                <span class="jsx-3748010317"></span>
+                                <span class="jsx-3748010317">{{ state_info.test.positive }}</span>
+                                <span class="jsx-3748010317">{{ state_info.test.total }}</span>
+                                <span class="jsx-3748010317">{{ state_info.test.testRate }}</span>
                             </div>
                         </div>
                         {{/each}}

@@ -1,6 +1,6 @@
 {
     "name": "wuhan-ncov-2020",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "A backend server",
     "main": "index.js",
     "scripts": {
@@ -22,7 +22,8 @@
         "handlebars": "^4.7.2",
         "hapi-geo-locate": "^3.2.0",
         "hapi-pino": "^6.3.0",
-        "jsdom": "^16.2.1"
+        "jsdom": "^16.2.1",
+        "node-fetch": "^2.6.0"
     },
     "devDependencies": {
         "@types/hapi__hapi": "^18.2.6",

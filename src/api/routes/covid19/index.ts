@@ -1,18 +1,24 @@
 'use strict';
 
-import * as Wreck from '@hapi/wreck';
 import { JSDOM } from 'jsdom';
-
+import * as fetch from 'node-fetch';
 import * as states from '../../../config/locales/states-mapping.json';
-import * as dict from '../../../config/locales/dictionary.json';
+
+import { fetch_covid19_test_state_current_data } from './covidtracking';
 
 const BASE_URI = 'https://coronavirus.1point3acres.com/';
 
 export const fetch_covid19_data = async (request, reply) => {
+    
     const locale = request.params.locale || 'en';
     const uri = BASE_URI + locale;
+
+    /**
+     * Switch Wrech over to node-fetch
+     */
+    const res = await fetch(uri);
+    const payload = await res.text();
     
-    const { res, payload } = await Wreck.get(uri, { json: false });
     const { document } = new JSDOM(payload.toString()).window;
     const title = 'COVID-19/Coronavirus Real Time Updates';
     
@@ -52,11 +58,13 @@ export const fetch_covid19_data = async (request, reply) => {
      */
     const state_detail = document.querySelectorAll("#map > div.tab-container > div.active > div.state-table > div > div.row");
     const state_json = {};
-    state_detail.forEach(nodeList => {
+    for (const nodeList of state_detail) {
         const span_nodes = nodeList.childNodes;
-        const states_zh = span_nodes[0].textContent;
+        const states_zh = span_nodes[0].textContent.trimEnd();
         const states_en = states.states[states_zh];
 
+        const test_tracking_json = await fetch_covid19_test_state_current_data(states_en.abbr);
+        test_tracking_json['testRate'] = (test_tracking_json['positive'] / test_tracking_json['total']).toFixed(2);
         const state_confirmed_info = span_nodes[1].childNodes;
         const state_deaths_info = span_nodes[2].childNodes;
 
@@ -68,8 +76,9 @@ export const fetch_covid19_data = async (request, reply) => {
             daeath_rate: span_nodes[3].textContent,
             source: span_nodes[4].innerHTML,
             isSOE: !!span_nodes[0].querySelector('i'),
+            test: test_tracking_json,
         };
-    });
+    };
     
     return reply.view('covid19', 
     { 
