@@ -14,7 +14,7 @@
         "url": "git://github.com/hehez/wuhan-ncov-2020.git"
     },
     "dependencies": {
-        "@hapi/hapi": "^18.4.0",
+        "@hapi/hapi": "^19.1.1",
         "@hapi/inert": "^5.2.2",
         "@hapi/vision": "^6.0.0",
         "@hapi/wreck": "^17.0.0",
