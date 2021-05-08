@@ -19,7 +19,7 @@
         "@hapi/vision": "^6.0.0",
         "@hapi/wreck": "^17.0.0",
         "dotenv": "^8.2.0",
-        "handlebars": "^4.7.2",
+        "handlebars": "^4.7.7",
         "hapi-geo-locate": "^3.2.0",
         "hapi-pino": "^6.3.0",
         "jsdom": "^16.2.1",
