@@ -23,7 +23,7 @@
         "hapi-geo-locate": "^3.2.0",
         "hapi-pino": "^6.3.0",
         "jsdom": "^16.2.1",
-        "node-fetch": "^2.6.0"
+        "node-fetch": "^2.6.7"
     },
     "devDependencies": {
         "@types/hapi__hapi": "^18.2.6",
